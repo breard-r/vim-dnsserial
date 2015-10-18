@@ -1,5 +1,4 @@
 " Copyright 2015 Rodolphe Breard
-" Author: Rodolphe Breard
 "
 " Licensed under the Apache License, Version 2.0 (the "License");
 " you may not use this file except in compliance with the License.
