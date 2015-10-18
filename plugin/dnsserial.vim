@@ -27,7 +27,7 @@ function! s:IncrementSerial(old_date, old_nb)
 endfunction
 
 function! s:DNSSerialUpdate()
-    let pattern = '\(\d\{8}\)\(\d\{2}\)\s*;\s*\cserial'
+    let pattern = '\(\d\{8}\)\(\d\+\)\s*;\s*\cserial'
     if search(pattern) == 0
         echom "No serial found."
         return 0
