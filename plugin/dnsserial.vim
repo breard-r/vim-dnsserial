@@ -26,7 +26,7 @@ function! s:IncrementSerial(old_date, old_nb)
     return curr_date.curr_nb
 endfunction
 
-function! DNSSerialUpdate()
+function! s:DNSSerialUpdate()
     let pattern = '\(\d\{8}\)\(\d\{2}\)\s*;\s*\cserial'
     if search(pattern) == 0
         echom "No serial found."
@@ -38,3 +38,5 @@ function! DNSSerialUpdate()
     execute "s/".old_serial."/".new_serial."/"
     echom "Serial updated to ".new_serial."."
 endfunction
+
+command! DNSSerialUpdate call s:DNSSerialUpdate()
