@@ -1,12 +1,12 @@
 " Copyright 2015 Rodolphe Breard
 " Author: Rodolphe Breard
-" 
+"
 " Licensed under the Apache License, Version 2.0 (the "License");
 " you may not use this file except in compliance with the License.
 " You may obtain a copy of the License at
-" 
+"
 "   http://www.apache.org/licenses/LICENSE-2.0
-" 
+"
 " Unless required by applicable law or agreed to in writing, software
 " distributed under the License is distributed on an "AS IS" BASIS,
 " WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,7 +17,7 @@ function! s:IncrementSerial(old_date, old_nb)
     let curr_date = strftime("%Y%m%d")
     if a:old_date ==? curr_date
         let curr_nb = a:old_nb + 1
-        if curr_nb < 10 
+        if curr_nb < 10
             let curr_nb = "0".curr_nb
         endif
     else
