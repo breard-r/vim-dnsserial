@@ -13,7 +13,13 @@
 " limitations under the License.
 
 
-augroup dnsserial
-    autocmd!
-    autocmd BufWritePre <buffer> DNSSerialUpdate
-augroup END
+if !exists('g:dnsserial_auto_update')
+    let g:dnsserial_auto_update = 1
+endif
+
+if g:dnsserial_auto_update
+    augroup dnsserial
+        autocmd!
+        autocmd BufWritePre <buffer> DNSSerialUpdate
+    augroup END
+endif
