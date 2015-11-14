@@ -25,6 +25,20 @@ Usage
 By default, each time you save a `bindzone` file, the script will look for the DNS serial number and update it. You can also update it without saving the file by invoking the `:DNSSerialUpdate` function.
 
 
+Patterns
+--------
+
+In order to be detected, the DNS serial number must match the following pattern:
+
+* `YYYYMMDDXX ; serial`
+  - `YYYY` is the year (4 digits);
+  - `MM` is the month (2 digits);
+  - `DD` is the day (2 digits);
+  - `XX` is any non-negative number (1 or more digits);
+  - the word `serial` is not case-sensitive;
+  - there can be any number of blanks on each sides of the semicolon.
+
+
 Configuration
 -------------
 
