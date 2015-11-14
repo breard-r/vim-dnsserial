@@ -79,7 +79,7 @@ This is a list of every components of the serial number. Each component is defin
 
 A simple pattern matching a serial defined as an integer and followed by a comment starting by the word `serial` is:
 
-```json
+```js
 {
   'regex': '\(\d\+\)\s*;\s*\cserial',
   'matching': [
@@ -91,7 +91,7 @@ A simple pattern matching a serial defined as an integer and followed by a comme
 The same example, but having the serial number starting by the current date (YYYYMMDD) and the integer padded on two digits:
 
 
-```json
+```js
 {
   'regex': '\(\d\{8}\)\(\d\+\)\s*;\s*\cserial',
   'matching': [
