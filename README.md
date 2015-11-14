@@ -19,6 +19,12 @@ I know this not the first vim plugin available to update a DNS-zone serial numbe
 It chose not to fork the original plugin but to write a new one from scratch mainly for legal purposes, but also because I did not found the code as simple as I expected.
 
 
+Usage
+-----
+
+By default, each time you save a `bindzone` file, the script will look for the DNS serial number and update it. You can also update it without saving the file by invoking the `:DNSSerialUpdate` function.
+
+
 Configuration
 -------------
 
