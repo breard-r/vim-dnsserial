@@ -31,10 +31,15 @@ Patterns
 In order to be detected, the DNS serial number must match one the following pattern:
 
 * `YYYYMMDDXX ; serial`
-  - `YYYY` is the year (4 digits);
+  - `YYYY` is the year (4 digits, must start by either `19` or `2`);
   - `MM` is the month (2 digits);
   - `DD` is the day (2 digits);
   - `XX` is any non-negative number (1 or more digits);
+  - the word `serial` is not case-sensitive;
+  - there can be any number of blanks on each sides of the semicolon.
+
+* `SSSSSSSSSS ; serial`
+  - `SSSSSSSSSS` is the UNIX tiemstamp (10 digits, must start by `1`);
   - the word `serial` is not case-sensitive;
   - there can be any number of blanks on each sides of the semicolon.
 
@@ -42,6 +47,8 @@ In order to be detected, the DNS serial number must match one the following patt
   - `XX` is any non-negative number (1 or more digits);
   - the word `serial` is not case-sensitive;
   - there can be any number of blanks on each sides of the semicolon.
+
+According to those patterns, only dates between 1900 and 2999 will be detected; however this should not be a problem at all. Most importantly, only timestamps between September 9 2001 and March 17 2030 will be detected.
 
 
 Configuration

@@ -20,10 +20,18 @@ endif
 if !exists('g:dnsserial_patterns')
     let g:dnsserial_patterns = [
         \{
-            \'regex': '\(\d\{8}\)\(\d\+\)\s*;\s*\cserial',
+            \'regex': '\(19\d\{2}\|20\d\{2}\)\([01]\d\)\([0-3]\d\)\(\d\+\)\s*;\s*\cserial',
             \'matching': [
-                \{'type': 'date', 'fmt': '%Y%m%d'},
+                \{'type': 'date', 'fmt': '%Y'},
+                \{'type': 'date', 'fmt': '%m'},
+                \{'type': 'date', 'fmt': '%d'},
                 \{'type': 'integer', 'padding': 2, 'date_reset': 1}
+            \]
+        \},
+        \{
+            \'regex': '\(1\d\{9}\)\s*;\s*\cserial',
+            \'matching': [
+                \{'type': 'date', 'fmt': '%s'},
             \]
         \},
         \{
