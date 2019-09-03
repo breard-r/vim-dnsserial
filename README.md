@@ -19,6 +19,18 @@ I know this not the first vim plugin available to update a DNS-zone serial numbe
 It chose not to fork the original plugin but to write a new one from scratch mainly for legal purposes, but also because I did not found the code as simple as I expected.
 
 
+Status
+------
+
+This project is passively maintained. If there is no recent commits it is because:
+
+- I did not encountered a bug and nobody reported any.
+- I am happy with the functionalities and nobody asked for new ones.
+- It works on both vim and neovim.
+
+If you need anything, please open an issue.
+
+
 Usage
 -----
 
