@@ -51,7 +51,7 @@ In order to be detected, the DNS serial number must match one the following patt
   - there can be any number of blanks on each sides of the semicolon.
 
 * `SSSSSSSSSS ; serial`
-  - `SSSSSSSSSS` is the UNIX tiemstamp (10 digits, must start by `1`);
+  - `SSSSSSSSSS` is the UNIX timestamp (10 digits, must start by `1`);
   - the word `serial` is not case-sensitive;
   - there can be any number of blanks on each sides of the semicolon.
 
